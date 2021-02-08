@@ -1,5 +1,7 @@
 # repro
 
+*Update: this is caused by Methodical 0.10.0-alpha being distributed as an AOT-compiled uberjar (https://github.com/camsaul/methodical/issues/40 https://github.com/camsaul/methodical/issues/33), which leads to an opaque transitive dependency error.*
+
 This is a minimum reproduction for an issue with Clojure 1.10.2, Specter 1.1.3,
 Methodical 0.10.0-alpha, and Riddley 0.2.0. Specter depends on Riddley 0.1.12,
 and Methodical depends on Riddley 0.1.12 transitively (through Potemkin 0.4.5).
